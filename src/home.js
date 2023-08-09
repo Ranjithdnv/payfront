@@ -7,7 +7,7 @@ import {Link} from  "react-router-dom"
 function Home() {
   const [ss,setss]=useState("")
 const displayRazorpay =async()=>{
-  const  order= await axios.post("http://localhost:5000/create",{amount:10000})
+  const  order= await axios.post("https://ranjirender.onrender.com/create",{amount:10000})
   console.log(order.data.id)
   var options = {
     "key": "rzp_test_6G6Yj3PsY2wyka", // Enter the Key ID generated from the Dashboard
@@ -17,7 +17,7 @@ const displayRazorpay =async()=>{
     "description": "Test Transaction gone waste",
     "image": "https://imgs.search.brave.com/8o53S6kB4bwahZFbdP188XLdkpPmvG4rOsX-i5NeUnU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDg4/NTcyNDQxL3Bob3Rv/L2hhbmQtb2YtZ29k/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0xZ1dEcmdsOFN5/WFR2RFJ3SVNHcU9P/MlZrbkJuTi1aOXB5/NXBKT3RzQ2FVPQ",
     "order_id": order.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-    "callback_url": "http://localhost:5000/payment/success",
+    "callback_url": "https://ranjirender.onrender.com/payment/success",
     "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
         "name": "Gaurav Kumar", //your customer's name
         "email": "gaurav.kumar@example.com",
