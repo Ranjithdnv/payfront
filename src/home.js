@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import axios from 'axios';
 import { useState } from 'react';
-
+import {Link} from  "react-router-dom"
 function Home() {
   const [ss,setss]=useState("")
 const displayRazorpay =async()=>{
@@ -94,6 +94,7 @@ const displayRazorpay =async()=>{
         <button className='App-link' onClick={displayRazorpay}>
           Pay ₹500
         </button>
+        <Link to ="/payment">next page</Link>
       </header>
     </div>
   );
